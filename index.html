@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Repositorio Digital – Inteligencia Artificial</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f6f8;
+            color: #333;
+        }
+
+        header {
+            background-color: #0b3c5d;
+            color: white;
+            padding: 20px 30px;
+        }
+
+        .header-container {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .header-container img {
+            width: 250px;
+        }
+
+        main {
+            padding: 40px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .titulo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .titulo h2 {
+            font-size: 26px;
+            color: #0b3c5d;
+        }
+
+        /* ---------- TABS ---------- */
+        .tabs {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 35px;
+            flex-wrap: wrap;
+        }
+
+        .tab-btn {
+            background-color: #1d70b8;
+            color: white;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .tab-btn:hover {
+            background-color: #155a96;
+        }
+
+        .tab-btn.active {
+            background-color: #0b3c5d;
+        }
+
+        /* ---------- GRID ---------- */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .apartado {
+            display: none;
+        }
+
+        .apartado.active {
+            display: grid;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* ---------- ICONOS ---------- */
+        .pdf-icon {
+            width: 50px;
+            height: 60px;
+            background-color: #c62828;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            line-height: 60px;
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+
+        .ppt-icon {
+            width: 50px;
+            height: 60px;
+            background-color: #f57c00;
+            color: white;
+            font-weight: bold;
+            border-radius: 4px;
+            margin-bottom: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+        }
+
+        .sb3-icon {
+            width: 50px;
+            height: 60px;
+            background-color: #4caf50;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            line-height: 60px;
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            margin: 0 0 10px 0;
+            font-size: 17px;
+            color: #0b3c5d;
+        }
+
+        .card p {
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .card a {
+            margin-top: auto;
+            text-decoration: none;
+            color: white;
+            background-color: #1d70b8;
+            padding: 10px;
+            text-align: center;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+
+        footer {
+            background-color: #0b3c5d;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 40px;
+            font-size: 13px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="header-container">
+        <img src="logo-unl.png" alt="Logo UNL">
+        <div>
+            <h1>Universidad Nacional de Loja</h1>
+            <h2>Pedagogía de las Ciencias Experimentales – Informática</h2>
+            <p><strong>Autor:</strong> Jose Luis Villa Peña</p>
+        </div>
+    </div>
+</header>
+
+<main>
+
+    <div class="titulo">
+        <h2>Repositorio Digital Académico</h2>
+        <p>Recursos sobre Inteligencia Artificial</p>
+    </div>
+
+    <!-- BOTONES -->
+    <div class="tabs">
+        <button class="tab-btn" onclick="mostrarApartado('presentaciones', this)">Presentaciones</button>
+        <button class="tab-btn" onclick="mostrarApartado('practicos', this)">Archivos prácticos</button>
+        <button class="tab-btn" onclick="mostrarApartado('textos', this)">Textos base</button>
+        <button class="tab-btn" onclick="mostrarApartado('manuales', this)">Manuales</button>
+    </div>
+
+    <!-- PRESENTACIONES -->
+    <section id="presentaciones" class="grid apartado">
+
+        <div class="card">
+            <div class="ppt-icon">📊<span>PPT</span></div>
+            <h3>Gráficos básicos en Excel</h3>
+            <p><strong>Tipo:</strong> Presentación</p>
+            <a href="https://drive.google.com/file/d/1_1jyJ1RqfaRegWT-XpfzeL3fJq2Rt_xU/view" target="_blank">Abrir presentación</a>
+        </div>
+
+        <div class="card">
+            <div class="ppt-icon">📊<span>PPT</span></div>
+            <h3>Introducción a la IA – 4to EGB</h3>
+            <a href="https://drive.google.com/file/d/1n2IdV6Y8woQF19OYDfDq4dni08nktz4a/view" target="_blank">Abrir presentación</a>
+        </div>
+
+        <div class="card">
+            <div class="ppt-icon">📊<span>PPT</span></div>
+            <h3>Introducción a la IA – 5to EGB</h3>
+            <a href="https://drive.google.com/file/d/1u6Ysh__6k4kBpjtySpv8ZzjI3Z8Xu3Yf/view" target="_blank">Abrir presentación</a>
+        </div>
+
+        <div class="card">
+            <div class="ppt-icon">📊<span>PPT</span></div>
+            <h3>Patrones y razonamiento lógico – 4to EGB</h3>
+            <a href="https://drive.google.com/file/d/1YrZfcPF1gC6qBKxdGDZ4cllFpREQz0ZS/view" target="_blank">Abrir presentación</a>
+        </div>
+
+    </section>
+
+    <!-- ARCHIVOS PRACTICOS -->
+    <section id="practicos" class="grid apartado">
+
+        <div class="card">
+            <div class="sb3-icon">SB3</div>
+            <h3>Gestos – Machine Learning Environment</h3>
+            <p><strong>Tipo:</strong> Archivo Pictoblox (.sb3)</p>
+            <a href="https://drive.google.com/file/d/1j8RlaDnY_EM1-V2AhwM45O8klYnA3bXZ/view" target="_blank">Abrir archivo</a>
+        </div>
+
+        <div class="card">
+            <div class="sb3-icon">SB3</div>
+            <h3>Laberinto en programación por bloques</h3>
+            <p><strong>Tipo:</strong> Archivo Pictoblox (.sb3)</p>
+            <a href="https://drive.google.com/file/d/12wykMjIpr-av6KKum_Jzbxkh6urAdsLr/view" target="_blank">Abrir archivo</a>
+        </div>
+
+        <div class="card">
+            <div class="sb3-icon">SB3</div>
+            <h3>Laberinto – Machine Learning Environment</h3>
+            <p><strong>Tipo:</strong> Archivo Pictoblox (.sb3)</p>
+            <a href="https://drive.google.com/file/d/1Acn7zfuMBFTYUCUqf6HVVcrt7vDQQoFo/view" target="_blank">Abrir archivo</a>
+        </div>
+
+    </section>
+
+    <!-- TEXTOS BASE -->
+    <section id="textos" class="grid apartado">
+
+        <div class="card">
+            <div class="pdf-icon">PDF</div>
+            <h3>Inteligencias Artificiales: De la teoría a la práctica</h3>
+            <p><strong>Tipo:</strong> Artículo científico</p>
+            <a href="https://docs.google.com/document/d/1gXCYz8oAN3_wH-ppn7q-hNyNE6Hp5e6kANH0ao-pj_M/edit" target="_blank">Abrir documento</a>
+        </div>
+
+        <div class="card">
+            <div class="pdf-icon">PDF</div>
+            <h3>Una mirada a la inteligencia artificial</h3>
+            <p><strong>Tipo:</strong> Artículo científico</p>
+            <a href="https://docs.google.com/document/d/19oCTLXlg8LKnZOSrE0-0F8GP_P7kH5oAAx3713dOrVQ/edit" target="_blank">Abrir documento</a>
+        </div>
+
+        <div class="card">
+            <div class="pdf-icon">PDF</div>
+            <h3>Inteligencia artificial en investigación científica</h3>
+            <p><strong>Tipo:</strong> Artículo científico</p>
+            <a href="https://docs.google.com/document/d/1AzUkX-6t3p1O5-JdH9xTrWr6xsLQRLxFnme12BCe6Jk/edit" target="_blank">Abrir documento</a>
+        </div>
+
+        <div class="card">
+            <div class="pdf-icon">PDF</div>
+            <h3>La Inteligencia Artificial</h3>
+            <p><strong>Tipo:</strong> Artículo científico</p>
+            <a href="https://docs.google.com/document/d/1OinuJebpeOQ4xvtaE9pQ6fwa3OnVTIIb1f2wu-vvW1s/edit" target="_blank">Abrir documento</a>
+        </div>
+
+        <div class="card">
+            <div class="pdf-icon">PDF</div>
+            <h3>Inteligencia artificial</h3>
+            <p><strong>Tipo:</strong> Artículo científico</p>
+            <a href="https://www.usfq.edu.ec/sites/default/files/2025-04/koyuntura-version-2-abril-2025.pdf" target="_blank">Abrir documento</a>
+        </div>
+
+        <div class="card">
+            <div class="pdf-icon">PDF</div>
+            <h3>La IA como herramienta universitaria</h3>
+            <p><strong>Tipo:</strong> Artículo científico</p>
+            <a href="https://docs.google.com/document/d/1M3dW1ofAKBtLXsBxPFWce6Y-TQlWUlBqRSBMCaQE-dA/edit" target="_blank">Abrir documento</a>
+        </div>
+
+        <div class="card">
+            <div class="pdf-icon">PDF</div>
+            <h3>IA e investigación educativa internacional</h3>
+            <p><strong>Tipo:</strong> Artículo científico</p>
+            <a href="https://docs.google.com/document/d/14Eb64JlvXI_-6PgDedo1jlVP6Qt8QkoA9FCyPP-FI2w/edit" target="_blank">Abrir documento</a>
+        </div>
+
+        <div class="card">
+            <div class="pdf-icon">PDF</div>
+            <h3>La inteligencia artificial en la sociedad</h3>
+            <p><strong>Tipo:</strong> Artículo científico</p>
+            <a href="https://docs.google.com/document/d/1V_zX7Liaw2xNq7SIkd6C9HjSBxBoYhYEXT6Y14hjss4/edit" target="_blank">Abrir documento</a>
+        </div>
+
+        <div class="card">
+            <div class="pdf-icon">PDF</div>
+            <h3>AI4Research: IA en la investigación académica</h3>
+            <p><strong>Tipo:</strong> Artículo científico</p>
+            <a href="https://docs.google.com/document/d/1vaJ4wIsdcw6EwVos85gKFm0dxc1X-7Vv2H3VqqciK1U/edit" target="_blank">Abrir documento</a>
+        </div>
+
+        <div class="card">
+            <div class="pdf-icon">PDF</div>
+            <h3>La Inteligencia Artificial en investigación científica</h3>
+            <p><strong>Tipo:</strong> Artículo científico</p>
+            <a href="https://drive.google.com/file/d/1v0qHGFiCirePMYuU2StPYxxJTfkWHzhS/view" target="_blank">Abrir documento</a>
+        </div>
+
+        <div class="card">
+            <div class="pdf-icon">PDF</div>
+            <h3>Uso de la Inteligencia Artificial en publicación de artículos científicos</h3>
+            <p><strong>Tipo:</strong> Artículo científico</p>
+            <a href="https://docs.google.com/document/d/1szPHSzA2KLGe-6-eck7KRtSWwVPWbIzDho-oDSXlKes/edit" target="_blank">Abrir documento</a>
+        </div>
+
+        <div class="card">
+            <div class="pdf-icon">PDF</div>
+            <h3>La Inteligencia Artificial y su impacto en la comunicación</h3>
+            <p><strong>Tipo:</strong> Artículo científico</p>
+            <a href="https://docs.google.com/document/d/1ULN27ogUq8Y1qn3GXRkKO41bKobc71M5K-taOCRaoSU/edit" target="_blank">Abrir documento</a>
+        </div>
+
+    </section>
+
+    <!-- MANUALES -->
+    <section id="manuales" class="grid apartado">
+
+        <div class="card">
+            <div class="pdf-icon">PDF</div>
+            <h3>Manual de uso de la herramienta de Pictoblox</h3>
+            <p><strong>Tipo:</strong> Manual</p>
+            <a href="https://drive.google.com/file/d/1rVfvjc5c_BF0bO02e1zx6x4ohglSVLbk/view?usp=drive_link" target="_blank">Abrir documento</a>
+        </div>
+
+        <div class="card">
+            <div class="pdf-icon">PDF</div>
+            <h3>Manual de Uso de Presentaciones Educativas</h3>
+            <p><strong>Tipo:</strong> Manual</p>
+            <a href="https://drive.google.com/file/d/1SUVU6P_6iEDOLpoB-fyyE8XTbNSTE7cJ/view?usp=drive_link" target="_blank">Abrir documento</a>
+        </div>
+
+        <div class="card">
+            <div class="pdf-icon">PDF</div>
+            <h3>Manual Detallado de Uso de los Artículos Científicos de la Página Web</h3>
+            <p><strong>Tipo:</strong> Manual</p>
+            <a href="https://drive.google.com/file/d/14p_VnrkpAGAlhUfN7PoC2bE5J8YgWtsc/view?usp=drive_link" target="_blank">Abrir documento</a>
+        </div>
+
+    </section>
+
+</main>
+
+<footer>
+    Repositorio Digital Académico • Inteligencia Artificial • UNL • 2026
+</footer>
+
+<script>
+function mostrarApartado(id, boton) {
+    document.querySelectorAll('.apartado').forEach(a => a.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+    boton.classList.add('active');
+}
+</script>
+
+</body>
+</html>
